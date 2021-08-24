@@ -4,7 +4,7 @@ from nltk.corpus import stopwords
 
 from tqdm import tqdm
 
-STOPWORDS = list(set(stopwords.words("italian")))
+STOPWORDS = list(set(stopwords.words("english")))
 with open("./src/blacklist.txt", "r", encoding="utf-8") as f:
     to_remove = f.read().splitlines()
 STOPWORDS.extend(to_remove)
@@ -21,6 +21,7 @@ def sanitize_text(text: str, remove_stopwords: bool) -> str:
 
     Args:
         text (str): the input text you want to clean
+        language (str): the language used to remove stopwords
         remove_stopwords (bool): whether or not to remove stopwords
 
     Returns:
