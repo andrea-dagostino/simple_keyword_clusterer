@@ -26,7 +26,7 @@ df = clusterer.extract(data)
 
 print(df)
 ```
-<img src="https://github.com/Tangelus/simple_keyword_clusterer/blob/master/images/clustering_sample.png" alt="clustering_example" width="600"/>
+<img src="https://github.com/Tangelus/simple_keyword_clusterer/raw/master/images/clustering_sample.png" alt="clustering_example" width="600"/>
 
 
 ## Performance

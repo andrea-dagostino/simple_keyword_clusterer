@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="simple_keyword_clusterer",
-    version=0.2,
+    version=0.3,
     url="https://github.com/Tangelus/simple_keyword_clusterer",
     author="Andrea D'Agostino",
     author_email="andrea@andreadagostino.com",
