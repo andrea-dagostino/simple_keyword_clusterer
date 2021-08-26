@@ -70,10 +70,11 @@ Simply add your tuples to use this functionality.
 - NLTK
 - Tqdm
 
-Make sure to download NLTK English Stopwords with the command
+Make sure to download NLTK English stopwords and punctuation with the command
 
 ```python
 nltk.download("stopwords")
+nltk.download('punkt')
 ```
 
 ## Contact

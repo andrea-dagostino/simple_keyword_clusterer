@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="simple_keyword_clusterer",
-    version=0.18,
+    version=1.1,
     url="https://github.com/Tangelus/simple_keyword_clusterer",
     author="Andrea D'Agostino",
     author_email="andrea@andreadagostino.com",
@@ -16,6 +16,7 @@ setup(
     long_description_content_type="text/markdown",
     packages=find_packages(where="src"),
     package_dir={"":"src"},
+    include_package_data=True,
     license="MIT",
     classifiers=[
         "Programming Language :: Python :: 3",

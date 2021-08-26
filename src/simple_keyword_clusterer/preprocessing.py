@@ -2,11 +2,17 @@ import re
 import nltk
 from nltk.corpus import stopwords
 
+import pkgutil
+
+
 STOPWORDS = list(set(stopwords.words("english")))
-with open("./simple_keyword_clusterer/blacklist.txt", "r", encoding="utf-8") as f:
-    to_remove = f.read().splitlines()
+
+to_remove = pkgutil.get_data(__package__, 'blacklist.txt').decode('utf8').splitlines()
+
 STOPWORDS.extend(to_remove)
 
+KEYWORDS_TO_NORMALIZE = pkgutil.get_data(__package__, 'to_normalize.txt').decode('utf8').splitlines()
+KEYWORDS_TO_NORMALIZE = [eval(x) for x in KEYWORDS_TO_NORMALIZE]
 
 def sanitize_text(text: str, remove_stopwords: bool) -> str:
     """This utility function sanitizes a string by:
@@ -44,11 +50,7 @@ def sanitize_text(text: str, remove_stopwords: bool) -> str:
 
 
 def normalize_role(text):
-    with open("./simple_keyword_clusterer/blacklist.txt", "r", encoding="utf-8") as f:
-        roles_to_normalize = f.read().splitlines()
-        roles_to_normalize = [eval(x) for x in roles_to_normalize]
-
-    for wrong, right in roles_to_normalize:
+    for wrong, right in KEYWORDS_TO_NORMALIZE:
         if wrong in text:
             return right + " " + text[len(wrong) + 1 :]
         else:
