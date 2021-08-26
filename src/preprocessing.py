@@ -2,10 +2,8 @@ import re
 import nltk
 from nltk.corpus import stopwords
 
-from tqdm import tqdm
-
 STOPWORDS = list(set(stopwords.words("english")))
-with open("./src/misc/blacklist.txt", "r", encoding="utf-8") as f:
+with open("./src/blacklist.txt", "r", encoding="utf-8") as f:
     to_remove = f.read().splitlines()
 STOPWORDS.extend(to_remove)
 
@@ -46,7 +44,7 @@ def sanitize_text(text: str, remove_stopwords: bool) -> str:
 
 
 def normalize_role(text):
-    with open("./src/misc/to_normalize.txt", "r", encoding="utf-8") as f:
+    with open("./src/to_normalize.txt", "r", encoding="utf-8") as f:
         roles_to_normalize = f.read().splitlines()
         roles_to_normalize = [eval(x) for x in roles_to_normalize]
 

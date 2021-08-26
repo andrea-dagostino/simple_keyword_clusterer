@@ -1,9 +1,9 @@
-from src.job_title_extractor import Extractor
+from simple_keyword_clusterer import Clusterer
 
-with open('./src/data/jobs.txt', 'r', encoding='utf-8') as f:
+with open('./sample_jobs.txt', 'r', encoding='utf-8') as f:
     data = f.read().splitlines()
 
-extractor = Extractor(n_clusters=None)
+extractor = Clusterer(n_clusters=None)
 df = extractor.extract(data)
 
 print(df)

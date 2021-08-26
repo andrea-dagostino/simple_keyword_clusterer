@@ -2,7 +2,7 @@ import preprocessing
 import clustering
 
 
-class Extractor:
+class Clusterer:
     def __init__(self, n_clusters=None) -> None:
         self.n_clusters = n_clusters
 
