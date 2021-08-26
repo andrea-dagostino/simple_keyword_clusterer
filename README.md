@@ -21,12 +21,12 @@ with open("../my_keywords.txt", "r") as f:
 # instantiate object
 clusterer = Clusterer()
 
-#apply clustering
+# apply clustering
 df = clusterer.extract(data)
 
 print(df)
 ```
-<img src="./images/clustering_sample.png" alt="drawing" width="400"/>
+<img src="./images/clustering_sample.png" alt="drawing" width="600"/>
 
 
 ## Performance
@@ -38,7 +38,7 @@ You can specify the number of clusters yourself too
 # instantiate object
 clusterer = Clusterer(n_clusters=4)
 
-#apply clustering
+# apply clustering
 df = clusterer.extract(data)
 ```
 
