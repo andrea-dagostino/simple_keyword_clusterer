@@ -63,12 +63,13 @@ def make_clusters(raw_data, n_clusters=None):
         ],
         axis=1,
     )
-
+    # plt.figure(figsize=(10, 8))
     order_centroids = clusterer.cluster_centers_.argsort()[:, ::-1]
     kws = []
-    for i in range(len(centers)):
+    for i, (_x, _y) in enumerate(centers):
         for ind in order_centroids[i, :1]:
             kws.append(voc[ind])
+            # plt.text(_x, _y, f"{i}_{voc[ind]}", horizontalalignment='left', size='medium', color='black')
 
     df["cluster"] = df["cluster"].map({key: value for (key, value) in enumerate(kws)})
     df["input"] = raw_data
