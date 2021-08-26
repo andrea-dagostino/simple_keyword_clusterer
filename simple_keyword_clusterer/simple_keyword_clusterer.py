@@ -1,5 +1,5 @@
-from src import preprocessing
-from src import clustering
+import preprocessing
+import clustering
 
 
 class Clusterer:

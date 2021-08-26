@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as f:
     long_description=f.read()
@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="simple_keyword_clusterer",
-    version=0.6,
+    version=0.13,
     url="https://github.com/Tangelus/simple_keyword_clusterer",
     author="Andrea D'Agostino",
     author_email="andrea@andreadagostino.com",
@@ -14,8 +14,9 @@ setup(
     keywords = ['keyword-extraction', 'keyword-clustering'],
     long_description=long_description,
     long_description_content_type="text/markdown",
+    packages=find_packages(),
+    license="MIT",
     py_modules=["simple_keyword_clusterer", "preprocessing", "clustering"],
-    package_dir={"": "src"},
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.9",
