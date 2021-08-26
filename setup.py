@@ -18,4 +18,13 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent"
     ],
+    install_requires=[
+        "scikit-learn==0.24.2",
+        "tqdm==4.62.1",
+        "seaborn==0.11.2",
+        "numpy==1.21.2",
+        "nltk==3.6.2",
+        "matplotlib==3.4.3",
+        "pandas==1.3.2",
+    ],
 )

@@ -26,6 +26,7 @@ df = clusterer.extract(data)
 
 print(df)
 ```
+![Clustering example](./images/clustering_sample.png)
 
 ## Performance
 The algorithm will find the optimal number of clusters automatically based on the best Silhouette Score.
