@@ -78,7 +78,7 @@ def make_clusters(raw_data, n_clusters=None):
     sns.scatterplot(
         data=df, x="PCA1", y="PCA2", hue="cluster", palette="coolwarm", s=100
     )
-    plt.title(f"Num items {len(raw_data)}, Ideal num. clusters: {n_clusters}", fontsize=18)
+    plt.title(f"Simple Keyword Clusterer\nn: {len(raw_data)}, n. clusters: {n_clusters}", fontsize=18)
     plt.legend(fontsize=10, title="Clusters")
     plt.show()
 
