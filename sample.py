@@ -1,6 +1,6 @@
-from src.main import Extractor
+from src.job_title_extractor import Extractor
 
-with open('./data/jobs.txt', 'r', encoding='utf-8') as f:
+with open('./src/data/jobs.txt', 'r', encoding='utf-8') as f:
     data = f.read().splitlines()
 
 extractor = Extractor(n_clusters=None)

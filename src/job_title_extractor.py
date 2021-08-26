@@ -1,9 +1,8 @@
-from . import preprocessing
-from . import clustering
+import preprocessing
+import clustering
 
 
 class Extractor:
-
     def __init__(self, n_clusters=None) -> None:
         self.n_clusters = n_clusters
 
