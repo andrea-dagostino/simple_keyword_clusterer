@@ -1,5 +1,5 @@
 # Simple Keyword Clusterer
-A simple, machine learning package to cluster keywords in higher-level groups.
+A simple machine learning package to cluster keywords in higher-level groups.
 
 Example:<br>
 *"Senior Frontend Engineer" --> "Frontend Engineer"*<br>
