@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="simple_keyword_clusterer",
-    version=0.4,
+    version=0.6,
     url="https://github.com/Tangelus/simple_keyword_clusterer",
     author="Andrea D'Agostino",
     author_email="andrea@andreadagostino.com",
@@ -14,7 +14,7 @@ setup(
     keywords = ['keyword-extraction', 'keyword-clustering'],
     long_description=long_description,
     long_description_content_type="text/markdown",
-    py_modules=["simple_keyword_clusterer"],
+    py_modules=["simple_keyword_clusterer", "preprocessing", "clustering"],
     package_dir={"": "src"},
     classifiers=[
         "Programming Language :: Python :: 3.7",
