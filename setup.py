@@ -7,6 +7,8 @@ with open("README.md", "r") as f:
 setup(
     name="simple_keyword_clusterer",
     version=0.1,
+    author="Andrea D'Agostino",
+    author_email="andrea@andreadagostino.com",
     description="Extract higher level clusters from keywords",
     long_description=long_description,
     long_description_content_type="text/markdown",

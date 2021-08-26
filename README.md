@@ -2,7 +2,7 @@
 A simple, machine learning package to cluster keywords in higher-level groups.
 
 Example:<br>
-*"Senior Frontend Engineer" --> "Frontend Engineer"*
+*"Senior Frontend Engineer" --> "Frontend Engineer"*<br>
 *"Junior Backend developer" --> "Backend developer"*
 ___
 ## Installation
@@ -26,7 +26,8 @@ df = clusterer.extract(data)
 
 print(df)
 ```
-![Clustering example](./images/clustering_sample.png)
+<img src="./images/clustering_sample.png" alt="drawing" width="400"/>
+
 
 ## Performance
 The algorithm will find the optimal number of clusters automatically based on the best Silhouette Score.
