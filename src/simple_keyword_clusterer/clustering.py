@@ -37,7 +37,7 @@ def make_clusters(raw_data, n_clusters=None):
     )
 
     X = vectorizer.fit_transform(raw_data).toarray()
-    voc = vectorizer.get_feature_names()
+    voc = vectorizer.get_feature_names_out()
 
     if n_clusters != None:
         n_clusters = n_clusters
